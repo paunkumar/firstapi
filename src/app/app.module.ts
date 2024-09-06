@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BorrowLoanComponent } from './borrow-loan/borrow-loan.component';
 import { LoggingInterceptor } from './intercept/logging.interceptor';
 import { authGuard } from './service/auth.guard';
+import { DashboardChildComponent } from './dashboard/dashboard-child/dashboard-child.component';
+import { CourselistComponent } from './courselist/courselist.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { authGuard } from './service/auth.guard';
     RegisterComponent,
         LoginComponent,
         DashboardComponent,
-        BorrowLoanComponent
+        BorrowLoanComponent,
+        DashboardChildComponent,
+        CourselistComponent
   ],
   imports: [
     BrowserModule,

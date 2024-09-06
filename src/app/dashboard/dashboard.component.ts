@@ -11,6 +11,7 @@ import { APICommon } from '../interface/commonapi.interface';
 })
 export class DashboardComponent implements OnInit {
   userdata:any;
+  message:string= 'hello my child';
   constructor(private localstorage:LocalstorageService, private router:Router, private register:RegisterService){}
   ngOnInit(){
     let samp= this.localstorage.getData('api-response');
@@ -27,5 +28,8 @@ export class DashboardComponent implements OnInit {
     this.localstorage.removeData('session');
     this.localstorage.clearStorage();
     this.router.navigateByUrl('/');
+  }
+  welcomeChild(event:string){
+    this.message=event;
   }
 }
